@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    html, body{
+        height: 100%;
+    }
+
+    .canvas{
+        width: 500px;
+        height: 500px;
+        border: 2px solid #ccc;
+        margin: 0 auto;
+        background: linear-gradient(to bottom, #4dc3f4, #4df4ea);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mountain{
+        width: 300px;
+        height: 400px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .mountain:before{
+        content: '';
+        display: block;
+        border-width: 0 200px 400px 200px;
+        border-color: transparent transparent  #09f09c transparent;
+        border-style: solid;
+    }
+
+    .cloud{
+        width: 50px;
+        height: 35px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: #FFF;
+        position: absolute;
+        top: 50px;
+        left: -50px;
+        animation: cloud 5s linear infinite;
+    }
+
+    .cloud:before{
+        display: block;
+        content: '';
+        width: 26px;
+        height: 26px;
+        border-radius: 30px;
+        background: #FFF;
+        position: absolute;
+        left: -7px;
+        bottom: 0px;
+    }
+
+    .cloud:after{
+        display: block;
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background: #FFF;
+        position: absolute;
+        right: -4px;
+        bottom: 0px;
+
+    }  
+
+    @keyframes cloud{
+        100%{
+            left: 500px;
+        }
+    }  
+    </style>
+</head>
+<body>
+    <div class="canvas">
+       <div class="cloud"></div>
+       <div class="mountain"></div>
+    </div>
+</body>
+</html>
