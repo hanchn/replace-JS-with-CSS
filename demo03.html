@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }    
+    .bubble{
+        display: block;
+        width: 100px;
+        height: auto;
+        border-radius: 50px;
+        background: linear-gradient(45deg, #f01707, red);
+        position: relative;
+        max-height: 100px;
+    }
+
+    .bubble:before{
+        width: 20px;
+        height: 30px;
+        background: #FFF;
+        border-radius: 20px;
+        content: '';
+        display: block;
+        transform: rotate3d(0, 0, 1, -45deg);
+        position: absolute;
+        left: 60px;
+        top: 10px;
+    }
+
+    .bubble:after{
+        width: 20px;
+        height: 20px;
+        background: #FFF;
+        border-radius: 20px;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 75px;
+        top: 40px;
+    }
+
+    .bubbleBottom{
+        width: 0;
+        content: '';
+        display: block;
+        border-width: 0 10px 30px 10px;
+        border-color: transparent transparent  red transparent;
+        border-style: solid;
+        margin-left: 40px;
+    }
+
+    .bubble input{
+         width: 100px;
+         height: 100px;
+         opacity: 0;
+    }
+
+    .bubble input:checked{
+        display: none;
+    }
+
+    .bubble input:checked ~ .bubbleBottom{
+        display: none;
+    }
+
+    .counts{
+        width: 60px;
+        height: 40px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .nums{
+        width: 60px;
+        height: auto;
+        position: absolute;
+        left: 0;
+        bottom: -360px;
+    }
+
+    .nums input{
+        display: none;
+    }
+
+    .nums input:checked, .nums .num{
+        width: 60px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: #f01707;
+        color: #FFF;
+        display: block;
+    }
+
+    .bubbles .bubble{
+        position: fixed;
+        left: 0px;
+        bottom: -100px;
+    }
+
+    .bubbles .bubble:nth-child(1){
+        left: 400px;
+        animation: ani 6s linear 0s 1;
+    }
+
+    .bubbles .bubble:nth-child(2){
+        left: 200px;
+        animation: ani 6s linear 1s 1;
+    }  
+
+    .bubbles .bubble:nth-child(3){
+        left: 150px;
+        animation: ani 6s linear 2s 1;
+    }
+
+    .bubbles .bubble:nth-child(4){
+        left: 300px;
+        animation: ani 6s linear 3s 1;
+    } 
+
+    .bubbles .bubble:nth-child(5){
+        left: 320px;
+        animation: ani 6s linear 4s 1;
+    }
+
+    .bubbles .bubble:nth-child(6){
+        left: 180px;
+        animation: ani 6s linear 5s 1;
+    }  
+
+    .bubbles .bubble:nth-child(7){
+        left: 360px;
+        animation: ani 6s linear 6s 1;
+    }
+
+    .bubbles .bubble:nth-child(8){
+        left: 700px;
+        animation: ani 3s linear 7s 1;
+    }  
+
+    .bubbles .bubble:nth-child(9){
+        left: 550px;
+        animation: ani 3s linear 8s 1;
+    } 
+
+    @keyframes ani{
+        100%{
+            bottom: 1000px;
+        }
+    }               
+    </style>
+</head>
+<body>
+        <div class="counts">
+            <div class="nums">
+                <div class="num">9</div>
+                <div class="num">8</div>
+                <div class="num">7</div>
+                <div class="num">6</div>
+                <div class="num">5</div>
+                <div class="num">4</div>
+                <div class="num">3</div>
+                <div class="num">2</div>
+                <div class="num">1</div>
+                <div class="num">0</div>
+                <input type="radio" checked name="group01">
+                <input type="radio" checked name="group02">
+                <input type="radio" checked name="group03">
+                <input type="radio" checked name="group04">
+                <input type="radio" checked name="group05">
+                <input type="radio" checked name="group06">
+                <input type="radio" checked name="group07">
+                <input type="radio" checked name="group08">
+                <input type="radio" checked name="group09">
+            </div>
+        </div>
+                
+
+<div class="bubbles">
+    <div class="bubble">  
+      <input type="radio" name='group01'>
+        <div class="bubbleBottom"></div>
+    </div>
+
+
+    <div class="bubble">  
+        <input type="radio" name='group02'>
+        <div class="bubbleBottom"></div>
+    </div>
+
+    <div class="bubble">  
+        <input type="radio" name='group03'>
+        <div class="bubbleBottom"></div>
+    </div>
+
+
+    <div class="bubble">  
+        <input type="radio" name='group04'>
+        <div class="bubbleBottom"></div>
+    </div>
+    
+    <div class="bubble">  
+        <input type="radio" name='group05'>
+        <div class="bubbleBottom"></div>
+    </div>
+
+
+    <div class="bubble">  
+        <input type="radio" name='group06'>
+        <div class="bubbleBottom"></div>
+    </div>
+
+    <div class="bubble">  
+        <input type="radio" name='group07'>
+        <div class="bubbleBottom"></div>
+    </div>
+
+
+    <div class="bubble">  
+        <input type="radio" name='group08'>
+        <div class="bubbleBottom"></div>
+    </div>
+          
+    <div class="bubble">  
+        <input type="radio" name='group09'>
+        <div class="bubbleBottom"></div>
+    </div>
+</div>
+
+</body>
+</html>
