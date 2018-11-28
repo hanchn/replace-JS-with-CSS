@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      html, body{
+         height: 100%;
+         transform-style: preserve-3d;
+         perspective: 3000px;
+      }
+
+      *{
+          padding: 0;
+          margin: 0;
+      }
+
+      .perDiv{
+          /* background: #000; */
+          margin: 400px auto;
+          width: 800px;
+          height: 60px;
+          transform-style: preserve-3d;
+          animation: ani 20s linear infinite forwards;
+      }
+
+      .buttons{
+          width: 800px;
+          height: 60px;
+          border-radius: 4px;
+          background: 
+          linear-gradient(to right, #ff1a02, #f0b9b3) 160px 20px/2px 20px no-repeat,
+          linear-gradient(to right, #ff1a02, #f0b9b3) 320px 20px/2px 20px no-repeat,
+          linear-gradient(to right, #ff1a02, #f0b9b3) 480px 20px/2px 20px no-repeat,
+          linear-gradient(to right, #ff1a02, #f0b9b3) 640px 20px/2px 20px no-repeat,
+          linear-gradient(to right, #fa1f08, #fa9608);
+          box-shadow: 0 8px 16px 0 rgba(7,17,27,.1);
+          font-size: 18px;
+          text-align: center;
+          line-height: 60px;
+          overflow: hidden;
+          color: #FFF;
+          position: relative;
+      }
+
+      .buttons:nth-child(1){
+          transform: rotate3d(1, 0, 0, 60deg)  translate3d(0, 5px, 21px)
+      }
+
+      .buttons:nth-child(2){
+         transform: rotate3d(1, 0, 0, 120deg) translate3d(0px, 37px, 32px);
+      }    
+
+      .buttons:nth-child(3){
+         transform: translate3d(0, -120px, -10px);
+      }            
+
+      .button:active{
+        box-shadow: 0 4px 8px 0 rgba(7,17,27,.05);
+      }
+
+      .button{
+          width:160px;
+          height: 60px;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+      }
+
+      .button:nth-child(2){
+          left: 160px;
+      }
+
+      .button:nth-child(3){
+          left: 320px;
+      }
+
+      .button:nth-child(4){
+          left: 480px;
+      }
+
+      .button:nth-child(5){
+          left: 640px;
+      }           
+
+      .buttonsBg{
+          width: 140px;
+          height: 40px;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: #e64038;
+          border-radius: 4px;
+      }    
+    
+      .triangle{
+          width: 0;
+          height: 0;
+          border-width: 0px 30px 50px 30px;
+          border-style: solid;
+          border-color: transparent transparent #ff1a02 transparent;
+          transform: translate3d(-26px, -183px, 3px) rotateY(90deg) rotateZ(30deg);
+      }
+
+     .triangle.two{
+          width: 0;
+          height: 0;
+          border-width: 0px 30px 50px 30px;
+          border-style: solid;
+          border-color: transparent transparent #fa9608 transparent;
+          transform: translate3d(769px, -233px, 3px) rotateY(90deg) rotateZ(30deg);
+      }
+
+
+      @keyframes ani{
+          20%{
+             transform: rotateX(140deg);
+          }
+
+          40%{
+            transform: rotateX(360deg) rotateY(-90deg);
+          }      
+
+          60%{
+            transform: rotateX(360deg) rotateY(90deg);
+          }  
+
+          80%{
+            transform: rotateX(360deg) rotateY(-90deg);
+          }  
+
+          100%{
+            transform: rotateX(0deg);
+          }                  
+      }
+    </style>
+</head>
+<body>
+
+    <div class="perDiv">
+
+        <div class="buttons">
+            <div class="buttonsBg">
+                
+            </div>
+            <div class="button">首页</div>
+            <div class="button">列表</div>
+            <div class="button">关于我们</div>
+            <div class="button">公司介绍</div>
+            <div class="button">联系我们</div>
+        </div>
+
+        <div class="buttons">
+            <div class="buttonsBg">
+                
+            </div>
+            <div class="button">首页</div>
+            <div class="button">列表</div>
+            <div class="button">关于我们</div>
+            <div class="button">公司介绍</div>
+            <div class="button">联系我们</div>
+        </div>
+
+        <div class="buttons">
+            <div class="buttonsBg">
+                
+            </div>
+            <div class="button">首页</div>
+            <div class="button">列表</div>
+            <div class="button">关于我们</div>
+            <div class="button">公司介绍</div>
+            <div class="button">联系我们</div>
+        </div>
+
+        <div class="triangle"></div>
+
+        <div class="triangle two"></div>
+    </div>
+
+</body>
+</html>
